@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+
+  .titulo-principal {
+    @apply text-5xl md:text-7xl font-extrabold tracking-tight uppercase mb-8;
+  }
+  .titulo-seccion {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  .etiqueta-seccion {
+    @apply text-sm font-semibold uppercase tracking-wider text-gray-500 mb-2 block;
+  }
+
+  .badge-servicio {
+    @apply px-4 py-1 border border-gray-200 rounded-full text-sm;
+  }
+  .btn-icono {
+    @apply bg-indigo-100 text-indigo-600 p-4 rounded-full;
+  }
+  .btn-primario {
+    @apply bg-gray-950 text-white font-bold rounded-xl hover:bg-black transition-colors duration-300 uppercase tracking-wide text-sm;
+  }
+  .btn-redondo {
+    @apply bg-gray-950 text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors duration-300;
+  }
+  .btn-flecha {
+    @apply bg-white p-4 rounded-full border border-gray-200 shadow-sm text-gray-600 hover:bg-gray-100 transition;
+  }
+
+  .tarjeta-servicio {
+    @apply p-8 rounded-[2rem] h-full flex flex-col justify-center transition-transform hover:-translate-y-1;
+  }
+  .tarjeta-testimonio {
+    @apply bg-white p-8 rounded-3xl shadow-sm border border-gray-100 relative space-y-6 flex flex-col h-full transition-shadow hover:shadow-lg;
+  }
+  .comilla-decorativa {
+    @apply absolute top-6 right-8 text-7xl text-indigo-100 font-serif leading-none select-none;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all;
+  }
+  .label-base {
+    @apply text-sm font-medium text-gray-700;
+  }
+
+  .link-footer {
+    @apply text-gray-500 hover:text-gray-900 text-sm transition-colors;
+  }
+

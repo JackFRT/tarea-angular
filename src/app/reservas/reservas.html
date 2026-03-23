@@ -1,0 +1,51 @@
+<section class="bg-[#fdf9f3] py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="space-y-8">
+      <div>
+        <span class="etiqueta-seccion">— Sistema de reservas</span>
+        <h2 class="titulo-seccion text-gray-900">Reserva tu cita dental hoy.</h2>
+      </div>
+      <p class="text-gray-600 text-base max-w-lg leading-relaxed">
+        Programe sus citas dentales fácilmente con nuestro sistema de reservas intuitivo. Elija su dentista, horario y servicio preferidos.
+      </p>
+      <div class="space-y-4 pt-4">
+        <div class="flex items-center gap-4 text-gray-700 font-medium"><span class="text-xl">Telefono: </span><span>+(33)7 45 55 87 71</span></div>
+        <div class="flex items-center gap-4 text-gray-700 font-medium"><span class="text-xl">Correo: </span><span>spineedge@gmail.com</span></div>
+      </div>
+    </div>
+
+    <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl border border-gray-100">
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <input type="text" placeholder="Nombre completo" class="input-base">
+          </div>
+          <div class="space-y-2">
+            <input type="tel" placeholder="Telefono" class="input-base">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <input type="date" class="input-base text-gray-600" placeholder="Fecha de la cita">
+          </div>
+          <div class="space-y-2">
+            <select class="input-base text-gray-600 appearance-none bg-white cursor-pointer">
+              <option value="" disabled selected>Seleccione el horario</option>
+              <option value="09:00">09:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <textarea rows="4" placeholder="Escriba su consulta" class="input-base resize-none"></textarea>
+        </div>
+
+        <button type="button" class="w-full py-4 btn-primario">
+          Reservar cita
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
