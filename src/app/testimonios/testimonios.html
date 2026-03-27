@@ -11,45 +11,19 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="tarjeta-testimonio">
-        <span class="comilla-decorativa">“</span>
-        <div class="flex items-center gap-4 relative z-10">
-          <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sarah J." class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100">
-          <div>
-            <h4 class="font-bold text-lg text-gray-950">Sara J.</h4>
-            <p class="text-xs text-gray-500 -mt-1 mb-1">@saradentus</p>
-            <div class="flex text-yellow-400 text-sm">★★★★★</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (testimonio of listaTestimonios; track testimonio.nombre) {
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <p class="text-gray-600 mb-4">"{{ testimonio.comentario }}"</p>
+          <div class="flex items-center gap-4">
+            <img [src]="testimonio.foto" alt="Cliente" class="w-12 h-12 rounded-full">
+            <div>
+              <h4 class="font-bold text-sm">{{ testimonio.nombre }}</h4>
+              <span class="text-xs">{{ testimonio.estrellas }}</span>
+            </div>
           </div>
         </div>
-        <p class="text-gray-600 text-sm leading-relaxed flex-grow relative z-10">"Solía estar aterrorizada del dentista. Pero este equipo me hizo sentir muy cómoda."</p>
-      </div>
-
-      <div class="tarjeta-testimonio">
-        <span class="comilla-decorativa">“</span>
-        <div class="flex items-center gap-4 relative z-10">
-          <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Michael R." class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100">
-          <div>
-            <h4 class="font-bold text-lg text-gray-950">Mishelle R.</h4>
-            <p class="text-xs text-gray-500 -mt-1 mb-1">@mish_dentus</p>
-            <div class="flex text-yellow-400 text-sm">★★★★★</div>
-          </div>
-        </div>
-        <p class="text-gray-600 text-sm leading-relaxed flex-grow relative z-10">"Reservé una cita de urgencia tras una fractura dental. Un trabajo estético fantástico."</p>
-      </div>
-
-      <div class="tarjeta-testimonio">
-        <span class="comilla-decorativa">“</span>
-        <div class="flex items-center gap-4 relative z-10">
-          <img src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Elena P." class="w-14 h-14 rounded-full object-cover border-2 border-indigo-100">
-          <div>
-            <h4 class="font-bold text-lg text-gray-950">Elena P.</h4>
-            <p class="text-xs text-gray-500 -mt-1 mb-1">@elena_dentus</p>
-            <div class="flex text-yellow-400 text-sm">★★★★★</div>
-          </div>
-        </div>
-        <p class="text-gray-600 text-sm leading-relaxed flex-grow relative z-10">"Toda mi familia viene aquí. El equipo es gentil con los niños e incluso con los adultos."</p>
-      </div>
+      }
     </div>
   </div>
 </section>

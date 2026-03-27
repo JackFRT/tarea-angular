@@ -7,10 +7,11 @@
     
     <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
       <div class="flex gap-2">
-        <span class="badge-servicio">✦ Raiz</span>
-        <span class="badge-servicio">✦ Cuidado</span>
-        <span class="badge-servicio">✦ Prevencion</span>
+        @for (etiqueta of etiquetas; track etiqueta) {
+          <span class="badge-servicio">✦ {{ etiqueta }}</span>
+        }
       </div>
+      
       <p class="text-gray-500 text-sm max-w-xs text-left">
         Nuestro equipo de dentistas profesionales están dedicados a asegurar su comodidad y darle un servicio dental de alta calidad.
       </p>
@@ -28,18 +29,14 @@
 
   <section class="bg-[#fdf9f3] py-12 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-300">
-      <div class="flex flex-col items-center justify-center p-4">
-        <span class="text-5xl font-bold mb-2">12+</span>
-        <span class="text-sm text-gray-600">Años de experiencia<br>y trabajo dental.</span>
-      </div>
-      <div class="flex flex-col items-center justify-center p-4">
-        <span class="text-5xl font-bold mb-2">35</span>
-        <span class="text-sm text-gray-600">Especialistas certificados<br>en varios campos.</span>
-      </div>
-      <div class="flex flex-col items-center justify-center p-4">
-        <span class="text-5xl font-bold mb-2">10+</span>
-        <span class="text-sm text-gray-600">Clinicas felices.</span>
-      </div>
+      
+      @for (stat of estadisticas; track stat.numero) {
+        <div class="flex flex-col items-center justify-center p-4">
+          <span class="text-5xl font-bold mb-2">{{ stat.numero }}</span>
+          <span class="text-sm text-gray-600">{{ stat.linea1 }}<br>{{ stat.linea2 }}</span>
+        </div>
+      }
+
     </div>
   </section>
 
